@@ -1,5 +1,5 @@
                 <div class="post-preview">
-                    <a href="page.php">
+                    <a href="<?php the_permalink(); ?> ">
                         <h2 class="post-title">
                             <?php the_title(); ?>
                         </h2>
@@ -7,6 +7,7 @@
                             
                         </h3>
                     </a>
+                    <?php the_excerpt(); ?>
                     <p class="post-meta">Posted by <a href="#"><?php the_author(); ?></a> <?php the_date(); ?></p>
                 </div>
                 <hr><!--
@@ -44,8 +45,4 @@
                 </div>
                 <hr>-->
                 <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
+
