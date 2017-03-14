@@ -1,7 +1,8 @@
                 <ul class="pager">
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <?php next_posts_link( 'Previous  &rarr;' ); ?>
                     </li>
+                    <li><?php previous_posts_link( 'Next' ); ?></li>
                 </ul>
 
     <hr>

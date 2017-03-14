@@ -8,7 +8,11 @@
                         </h3>
                     </a>
                     <?php the_excerpt(); ?>
-                    <p class="post-meta">Posted by <a href="#"><?php the_author(); ?></a> <?php the_date(); ?></p>
+                    <p class="post-meta">Posted by <a href="#"><?php the_author(); ?></a> <?php the_date(); ?><a href="<?php comments_link(); ?>">
+                        <?php
+                        printf( _nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'textdomain' ), number_format_i18n( 						get_comments_number() ) ); ?>
+                    </a></p>
+                    
                 </div>
                 <hr><!--
                 <div class="post-preview">
