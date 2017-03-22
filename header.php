@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="<?php bloginfo( 'wpurl' );?>">Home</a>
+                        <a href="<?php bloginfo( 'wpurl' );?>">Hem</a>
                     </li>
                     <?php wp_list_pages( '&title_li=' ); ?>
 
