@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo get_bloginfo( 'name' ); ?></title>
+
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php bloginfo('template_directory');?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="<?php bloginfo( 'wpurl' );?>">Awfesome</a>
+                <a class="navbar-brand" href="<?php bloginfo( 'wpurl' );?>"><?php echo get_option( 'logotext' ); ?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,7 +62,9 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('<?php bloginfo('template_directory');?>/img/home-bg.jpg')">
+    <?php if ( get_header_image() ) : ?>
+    <header class="intro-header" style="background-image: url('<?php header_image(); ?>')">
+    <?php endif; ?>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

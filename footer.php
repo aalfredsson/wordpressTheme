@@ -1,8 +1,8 @@
                 <ul class="pager">
                     <li class="next">
-                        <?php next_posts_link( 'Previous  &rarr;' ); ?>
+                        <?php previous_posts_link( 'Next  &rarr;' ); ?>
                     </li>
-                    <li><?php previous_posts_link( 'Next' ); ?></li>
+                    <li class="previous"><?php next_posts_link( '&larr; Previous' ); ?></li>
                 </ul>
 
     <hr>
@@ -14,7 +14,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                         <li>
-                            <a href="#">
+                            <a href="<?php echo get_option('twitter'); ?>">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -22,7 +22,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo get_option('facebook'); ?>">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
